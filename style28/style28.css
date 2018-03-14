@@ -1,0 +1,63 @@
+.circleButton {
+  border: 0px;
+  outline: none;
+  border-radius: 5px;
+  background-color: orange;
+  position: relative;
+  width: 300px;
+  height: 150px;
+  text-align: center;
+  font-size: 100%;
+  box-shadow: 0px 0px 30px 2px grey;
+  transition-duration: 0.5s;
+  margin: 10px;
+}
+
+.circleButton:hover {
+  /* background-color: blueviolet; */
+  transition-duration: 0.2s;
+  box-shadow: 0px 0px 30px 5px grey;
+}
+
+.circleCanvas {
+  border-radius: 5px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.circleButton:active .circleCanvas {
+  background-color: rgba(0, 0, 0, 0.1);
+  /* transition-delay: 0.2s; */
+  transition-duration: 2s;
+}
+
+
+.dropdown {
+  border: 0px;
+  outline: none;
+  background-color: orange;
+  position: relative;
+  width: 300px;
+  height: 150px;
+  text-align: center;
+  font-size: 100%;
+  box-shadow: 0px 0px 30px 2px grey;
+  transition-duration: 0.5s;
+  margin: 10px;
+  align-items: flex-start;
+}
+
+.dropdown:hover {
+  background-color: chartreuse;
+  height: 300px;
+  transition: 0.5s;
+}
+
+.dropdownButton {
+  top: 0px;
+  position: sticky;
+  left: 0px;
+}
