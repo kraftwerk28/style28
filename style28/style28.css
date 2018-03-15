@@ -1,3 +1,9 @@
+a {
+  color: whitesmoke;
+}
+
+/* #region circleButton*/
+
 .circleButton {
   border: 0px;
   outline: none;
@@ -8,9 +14,11 @@
   height: 150px;
   text-align: center;
   font-size: 100%;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
   box-shadow: 0px 0px 30px 2px grey;
   transition-duration: 0.5s;
   margin: 10px;
+  padding: 10px;
 }
 
 .circleButton:hover {
@@ -34,30 +42,88 @@
   transition-duration: 2s;
 }
 
+/* #endregion */
 
-.dropdown {
+/* #region dropdown*/
+
+.circleDropdown {
+  z-index: 1;
   border: 0px;
   outline: none;
   background-color: orange;
+  border-radius: 5px;
   position: relative;
   width: 300px;
-  height: 150px;
+  height: 20px;
   text-align: center;
   font-size: 100%;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
   box-shadow: 0px 0px 30px 2px grey;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
   margin: 10px;
-  align-items: flex-start;
+  list-style-type: none;
+  cursor: default;
+  /* padding: 10px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.dropdown:hover {
-  background-color: chartreuse;
-  height: 300px;
+.circleDropdown:hover .dropdownul {
+  box-shadow: 0px 10px 30px 5px grey;
+}
+
+.circleDropdown:hover .dropdownul li {
+  visibility: visible;
+  opacity: 1;
+  max-height: 500px;
+  padding: 10px;
   transition: 0.5s;
 }
 
-.dropdownButton {
-  top: 0px;
-  position: sticky;
-  left: 0px;
+.dropdownul {
+  width: 100%;
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 11px;
 }
+
+.dropdownul li {
+  /* margin: 5px; */
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  background-color: violet;
+}
+
+.dropdownul li:hover {
+  background-color: steelblue;
+  transition-duration: 0.5s;
+}
+
+/* #endregion */
+
+/* #region textfield*/
+
+.textField {
+  background-color: aqua;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  width: 400px;
+  height: 50px;
+  padding: 5px;
+  margin: 10px;
+  font-family: 'Consolas' 'Courier New', Courier, monospace;
+  font-size: x-large;
+  transition-duration: 0.5s;
+}
+
+.textField:focus {
+  box-shadow: 0px 0px 20px 3px grey;
+  transition-duration: 0.5s;
+  border-radius: 0px;
+}
+
+/* #endregion */

@@ -19,7 +19,7 @@ Array.prototype.forEach.call(circleCanvases, canvas => {
     let size = 0;
     const t = setInterval(() => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = `rgba(0, 0, 0, ${15*(1/size)})`;
+      ctx.fillStyle = `rgba(0, 0, 0, ${15 * (1 / size)})`;
       ctx.beginPath();
       ctx.arc(e.clientX - offset.left, e.clientY - offset.top, size, 0, 2 * Math.PI);
       ctx.fill();
