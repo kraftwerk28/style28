@@ -4,49 +4,52 @@
   <!-- <meta http-equiv="refresh" content="3"> -->
   <title></title>
   <link rel="stylesheet" href="./style28/style28.css">
+  <link rel="icon" href="favicon.ico">
 </head>
 
 
 <body>
 
-  <button class="circleButton" style="width: 200px; height: 50px">
-    Hi there
-    <canvas class="circleCanvas"></canvas>
+  <button class="circleButton circle" style="width: 200px; height: 50px" onclick="setTimeout(() => alert('p'), 1000)">
+    Button1
+    <canvas class="buttonCanv"></canvas>
   </button>
-  <button class="circleButton" style="width: 200px; height: 50px">
-    Hi there
-    <canvas class="circleCanvas"></canvas>
-  </button>
-  <br>
-  <button class="circleButton" style="width: 425px; height: 50px">
-    Hi there
-    <canvas class="circleCanvas"></canvas>
+  <button class="circleButton circle" style="width: 200px; height: 50px">
+    Button2
+    <canvas class="buttonCanv"></canvas>
   </button>
   <br>
+  <button class="circleButton circle" style="width: 425px; height: 50px">
+    Button3
+    <canvas class="buttonCanv"></canvas>
+  </button>
+  <br>
+  <label class="inputCheckbox">CheckBox
+    <input type="checkbox" id="clswitch">
+    <div class="checkMark">
+      <div></div>
+    </div>
+  </label>
+  <br>
+  <input type="text" class="circle inputText" style="width: 425px" placeholder="input text">
   <li class="circleDropdown" style="width: 425px; background-color: crimson">
-    Hi there
+    Dropdown
     <!-- <canvas></canvas> -->
     <ul class="dropdownul">
       <li>
-        <a href="https://pornhub.com">kuk</a>
+        <a target="_blank" href="https://pornhub.com">op1</a>
       </li>
-      <li>kek</li>
-      <li>oru</li>
+      <li>
+        <a target="_blank" href="">op2</a>
+      </li>
+      <li>
+        <a target="_blank" href="">op3</a>
+      </li>
     </ul>
   </li>
 
-  <input type="text" class="textField" style="width: 425px">
-
-  <!-- <div style="overflow: auto">
-    <select name="Select" class="circleDropdown" style="width: 200px; height: 50px">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
-    </select>
-  </div> -->
-
   <script src="./style28/style28.js"></script>
+  <script src="./js.js"></script>
 </body>
 
 </html>

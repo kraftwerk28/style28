@@ -1,34 +1,38 @@
 a {
-  color: whitesmoke;
-}
-
-/* #region circleButton*/
-
-.circleButton {
-  border: 0px;
-  outline: none;
-  border-radius: 5px;
-  background-color: orange;
-  position: relative;
-  width: 300px;
-  height: 150px;
-  text-align: center;
-  font-size: 100%;
-  font-family: 'Consolas', 'Courier New', Courier, monospace;
-  box-shadow: 0px 0px 30px 2px grey;
-  transition-duration: 0.5s;
-  margin: 10px;
+  text-decoration-style: none;
+  color: white;
+  display: block;
   padding: 10px;
 }
 
-.circleButton:hover {
-  /* background-color: blueviolet; */
+body {
   transition-duration: 0.2s;
-  box-shadow: 0px 0px 30px 5px grey;
 }
 
-.circleCanvas {
-  border-radius: 5px;
+.circle {
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
+  text-align: center;
+  vertical-align: middle;
+  min-width: 100px;
+  width: auto;
+  height: 50px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+  transition-duration: 0.5s;
+}
+
+.circle:hover {
+  transition-duration: 0.2s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.buttonCanv {
+  border-radius: inherit;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -36,15 +40,22 @@ a {
   height: 100%;
 }
 
-.circleButton:active .circleCanvas {
-  background-color: rgba(0, 0, 0, 0.1);
-  /* transition-delay: 0.2s; */
-  transition-duration: 2s;
+.buttonCanv:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transition-duration: 0.5s;
 }
 
-/* #endregion */
+.buttonCanv:active {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition-duration: 0.5s;
+}
 
-/* #region dropdown*/
+.circleButton {
+  background-color: orange;
+  position: relative;
+}
+
+/* circle dropdown */
 
 .circleDropdown {
   z-index: 1;
@@ -58,7 +69,7 @@ a {
   text-align: center;
   font-size: 100%;
   font-family: 'Consolas', 'Courier New', Courier, monospace;
-  box-shadow: 0px 0px 30px 2px grey;
+  box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.5);
   transition-duration: 1s;
   margin: 10px;
   list-style-type: none;
@@ -69,14 +80,14 @@ a {
 }
 
 .circleDropdown:hover .dropdownul {
-  box-shadow: 0px 10px 30px 5px grey;
+  box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
 .circleDropdown:hover .dropdownul li {
   visibility: visible;
   opacity: 1;
   max-height: 500px;
-  padding: 10px;
+  /* padding: 10px; */
   transition: 0.5s;
 }
 
@@ -88,7 +99,6 @@ a {
 }
 
 .dropdownul li {
-  /* margin: 5px; */
   visibility: hidden;
   opacity: 0;
   max-height: 0px;
@@ -102,28 +112,124 @@ a {
   transition-duration: 0.5s;
 }
 
-/* #endregion */
+/* input text */
 
-/* #region textfield*/
-
-.textField {
-  background-color: aqua;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  width: 400px;
-  height: 50px;
-  padding: 5px;
-  margin: 10px;
-  font-family: 'Consolas' 'Courier New', Courier, monospace;
+.inputText {
+  width: auto;
+  border: 2px solid;
+  border-color: mediumslateblue;
+  text-align: left;
   font-size: x-large;
-  transition-duration: 0.5s;
 }
 
-.textField:focus {
-  box-shadow: 0px 0px 20px 3px grey;
-  transition-duration: 0.5s;
-  border-radius: 0px;
+.inputText:focus {
+  box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+  transition-duration: 0.2s;
 }
 
-/* #endregion */
+.textArea {
+  background-color: greenyellow;
+  text-align: initial;
+  font-size: large;
+  transition-duration: 0s;
+  resize: both;
+  overflow: auto;
+}
+
+.inputCheckbox {
+  border-radius: 2px;
+  display: inline-block;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
+  outline: none;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  padding-left: 30px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.inputCheckbox input {
+  display: none;
+}
+
+@keyframes check {
+  0% {
+    border-radius: 2px;
+    background-color: transparent;
+  }
+  50% {
+    border-radius: 50%;
+    background-color: orange;
+  }
+  100% {
+    border-radius: 2px;
+    background-color: orange;
+  }
+}
+
+@keyframes uncheck {
+  0% {}
+  50% {
+    border-radius: 50%;
+    background-color: orange;
+  }
+  100% {
+    border-radius: 2px;
+    background-color: transparent;
+  }
+}
+
+.checkMark {
+  height: 20px;
+  width: 20px;
+  left: 0px;
+  top: 5px;
+  position: absolute;
+  border: 3px orange solid;
+  animation: uncheck 0.3s forwards;
+}
+
+.inputCheckbox input:checked~.checkMark {
+  animation: check 0.3s forwards;
+}
+
+.checkMark div {
+  opacity: 0;
+  width: 30%;
+  height: 60%;
+  transform: translate(6px, 0px);
+  border-width: 0px 3px 3px 0px;
+  border-color: white;
+  border-style: solid;
+  background-color: transparent;
+  transition-duration: 0.25s;
+}
+
+.inputCheckbox input:checked~.checkMark div {
+  opacity: 1;
+  transform: translate(6px, 0px) rotate(45deg);
+  transition-duration: 0.2s;
+  transition-delay: 0.2s;
+}
+
+/* webkit */
+
+::-webkit-scrollbar-thumb {
+  background-color: silver;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: palegoldenrod;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
